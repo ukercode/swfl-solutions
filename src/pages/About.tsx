@@ -43,10 +43,10 @@ const About = () => {
           </div>
           <div className="space-y-5 text-foreground/80 leading-relaxed text-base lg:text-lg">
             <p>
-              SWFL Solutions was founded in Englewood, Florida to fill a critical gap in the construction and real estate market: independent, owner-side expertise. Too many homeowners and businesses had been burned by projects that ran late, over budget, or fell short of what was promised — often because they had no one in their corner who truly understood the process.
+              SWFL Solutions was founded in Englewood, Florida to fill a critical gap in the construction and real estate market: independent, owner representation. Too many homeowners and businesses had been burned by projects that ran late, over budget, or fell short of what was promised — often because they had no one in their corner managing their interests.
             </p>
             <p>
-              Today, we serve clients across Southwest Florida — from individual homeowners building their dream coastal residence to commercial developers managing multi-property portfolios. Whether the project is large or small, residential or commercial, our role stays the same: <strong className="text-primary">be the expert who works for you.</strong>
+              We serve clients in Southwest Florida — from individual homeowners building their coastal&nbsp;dream&nbsp;residence to commercial developers managing multi-property portfolios. Whether the project is large or small, residential or commercial, our role stays the same: making sure your vision and investment is secure, on budget, and on track from start to finish.
             </p>
           </div>
         </div>
