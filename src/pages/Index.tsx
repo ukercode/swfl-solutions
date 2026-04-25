@@ -12,6 +12,7 @@ import {
   Clock,
   ShieldCheck,
   MessageSquare,
+  SearchCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
