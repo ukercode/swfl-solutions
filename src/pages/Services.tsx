@@ -87,14 +87,14 @@ const Services = () => {
       <PageHero
         image={heroImg}
         eyebrow="Our Services"
-        title="Owner Representation & Project Management Services, Built Around You"
+        title={"Owner Representation &\nProject Management Services,\nBuilt Around You"}
         subtitle="Our mission: deliver your project on time, on budget, and to the highest standard — with your interests protected at every step."
       />
 
       {/* Quick nav */}
       <section className="bg-secondary border-b border-border sticky top-20 lg:top-24 z-30 backdrop-blur-md">
         <div className="container-prose py-4 overflow-x-auto">
-          <div className="flex items-center gap-6 text-sm font-medium whitespace-nowrap">
+          <div className="flex items-center gap-6 text-sm font-medium whitespace-nowrap justify-center">
             {services.map((s) => (
               <a
                 key={s.id}
