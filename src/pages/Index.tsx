@@ -12,6 +12,7 @@ import {
   Clock,
   ShieldCheck,
   MessageSquare,
+  SearchCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
@@ -44,6 +45,11 @@ const services = [
     icon: Building2,
     title: "Pre-Construction Advisory",
     desc: "Site assessment, design review, and contractor selection to set your project up for success before ground is broken.",
+  },
+  {
+    icon: SearchCheck,
+    title: "Project Assessment",
+    desc: "A thorough evaluation of your project's current status, risks, and opportunities — so you can move forward with clarity and confidence.",
   },
 ];
 
