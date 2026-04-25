@@ -129,23 +129,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container-prose">
-          <SectionHeading
-            eyebrow="Leadership"
-            title="Experienced Hands, Local Roots"
-            description="A growing team of construction, project management, and real estate professionals — proudly based in Englewood, Florida and serving the Southwest Florida region."
-          />
-          <div className="mt-12 max-w-3xl mx-auto bg-secondary border border-border rounded-lg p-10 text-center shadow-card-soft">
-            <Users className="w-10 h-10 text-accent mx-auto mb-4" />
-            <p className="text-foreground/80 leading-relaxed">
-              Want to learn more about our background and experience? We'd be happy to walk you through our background, project history, and references during your free consultation.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <CTABanner
         title="Let's Talk About Your Project"
         description="Whether you're starting from scratch or rescuing a project that's gone sideways, we're ready to listen."
