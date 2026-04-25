@@ -76,44 +76,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why choose us */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container-prose grid lg:grid-cols-5 gap-12 items-start">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-[2px] bg-accent" />
-              <span className="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Why Choose Us</span>
-            </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary leading-tight">
-              100% Loyalty. Zero Conflicts.
-            </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              Most construction problems trace back to one root cause: the owner had no expert advocate. We exist to solve that — for individuals and businesses alike.
-            </p>
-          </div>
-          <div className="lg:col-span-3 space-y-6">
-            <div className="border-l-4 border-accent pl-6 py-2">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-2">For Homeowners</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                Building or renovating your home is one of the largest investments you'll ever make. We make sure you get what you paid for — without the lack of communication, crippling delays, surprise change orders, cost over runs and stress that comes with going it alone.
-              </p>
-            </div>
-            <div className="border-l-4 border-accent pl-6 py-2">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-2">For Businesses & Developers</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                Commercial projects demand professional oversight. We bring the discipline, documentation, and decision support that protects your capital and accelerates your timeline — with the discretion and reliability your business requires.
-              </p>
-            </div>
-            <div className="border-l-4 border-accent pl-6 py-2">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-2">For Real Estate Investors</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                From feasibility through closeout, we provide the project intelligence and execution muscle to maximize ROI — and we know the Southwest Florida market intimately.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Credentials strip */}
       <section className="py-16 lg:py-20 bg-primary text-primary-foreground">
         <div className="container-prose grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-6">
