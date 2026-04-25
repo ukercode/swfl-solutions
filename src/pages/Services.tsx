@@ -36,7 +36,7 @@ const services = [
     intro:
       "Comprehensive end-to-end management of schedule, budget, scope, and quality — the discipline your project needs to succeed.",
     body:
-      "Our project managers run the day-to-day so your project stays on time, on budget, and on spec. We perform site assessments, develop accurate cost estimates, coordinate every contractor and subcontractor, and proactively resolve issues before they become problems. You get one accountable partner — and a project that finishes the way it was promised.",
+      "We manage the day-to-day so your project stays on time, on budget, and on spec. We perform site assessments, develop accurate cost estimates, coordinate every contractor and subcontractor, and proactively resolve issues before they become problems. You get one accountable partner — and a project that finishes the way it was promised.",
     bullets: [
       "Project assessment and detailed scope development",
       "Cost estimating and budget management",
@@ -55,7 +55,7 @@ const services = [
     body:
       "When projects go off the rails, owners need an experienced, neutral expert to assess the damage and lead the turnaround. We perform a rapid forensic review of contracts, schedules, finances, and field conditions, then deliver a recovery plan with clear next steps — and execute it alongside you.",
     bullets: [
-      "Forensic project audit and root-cause analysis",
+      "Forensic project audit and analysis",
       "Contractor performance and contract review",
       "Schedule recovery and budget realignment",
       "Dispute resolution and stakeholder mediation",
@@ -70,7 +70,7 @@ const services = [
     intro:
       "Independent eyes on your project — making sure the work is done right, the first time, and to the standards you're paying for.",
     body:
-      "We provide on-site quality assurance and inspection services that protect your investment. From permitting and code compliance through framing, finishes, and final inspections, we verify that every phase meets the plans, the specs, and your expectations. Catching issues early is the cheapest insurance you can buy.",
+      "We provide on-site quality assurance and inspection services that protect your investment. From architects and engineering, through framing, finishes, and final inspections; we verify that every phase meets the plans, the specs, and your expectations. Catching issues early is the cheapest insurance you can buy.",
     bullets: [
       "Permitting and entitlement coordination",
       "On-site inspections at every critical milestone",
@@ -87,7 +87,7 @@ const Services = () => {
       <PageHero
         image={heroImg}
         eyebrow="Our Services"
-        title={"Owner Representation &\nProject Management Services,\nBuilt Around You"}
+        title={"Owner Representation &\nProject Management Services -\nBuilt Around You"}
         subtitle="Our mission: deliver your project on time, on budget, and to the highest standard — with your interests protected at every step."
       />
 
@@ -177,7 +177,7 @@ const Services = () => {
       </div>
 
       <CTABanner
-        title="Not Sure Which Service You Need?"
+        title="Not Sure Where To Begin?"
         description="Every project is different. Contact us for a free, no-obligation conversation about your goals — and we'll recommend the right path forward."
       />
     </Layout>
