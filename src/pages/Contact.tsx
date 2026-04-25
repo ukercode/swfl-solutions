@@ -17,7 +17,7 @@ const contactCards = [
     label: "Email Us",
     value: "office@swflsolutions.com",
     href: "mailto:office@swflsolutions.com?subject=Project%20Inquiry",
-    helper: "We respond within 1 business day",
+    helper: "We respond within one business day",
   },
   {
     icon: MapPin,
@@ -76,7 +76,7 @@ const Contact = () => {
               Proudly Serving All of Southwest Florida
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              From Sarasota to the surrounding coastal communities — including Englewood, Venice, North Port, Port Charlotte, and Punta Gorda.
+              From Sarasota to the surrounding coastal communities — including Englewood, Venice, North Port, Port Charlotte, Punta Gorda and surrounding areas.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Englewood", "Venice", "Sarasota", "North Port", "Port Charlotte", "Punta Gorda"].map(
@@ -109,7 +109,7 @@ const Contact = () => {
               </li>
               <li className="flex justify-between border-b border-border pb-3">
                 <span className="text-muted-foreground">Email inquiries</span>
-                <span className="font-medium text-primary">Within 1 business day</span>
+                <span className="font-medium text-primary">Within one business day</span>
               </li>
               <li className="flex justify-between border-b border-border pb-3">
                 <span className="text-muted-foreground">Initial consultation</span>
