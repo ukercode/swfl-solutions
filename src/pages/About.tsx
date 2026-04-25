@@ -116,7 +116,7 @@ const About = () => {
 
       {/* Credentials strip */}
       <section className="py-16 lg:py-20 bg-primary text-primary-foreground">
-        <div className="container-prose grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="container-prose grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-6">
           {credentials.map((c) => (
             <div key={c.label} className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
