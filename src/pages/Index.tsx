@@ -119,11 +119,11 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground border-y border-accent/20">
         <div className="container-prose py-6 lg:py-8">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm uppercase tracking-[0.18em] font-medium">
-            {["Owner Representation", "Project Management", "Project Recovery", "Construction Oversight", "Real Estate Development"].map(
+            {["Owner Representation", "Project Management", "Project Recovery", "Construction Oversight"].map(
               (item, i) => (
                 <div key={item} className="flex items-center gap-8">
                   <span className="text-primary-foreground/90">{item}</span>
-                  {i < 4 && <span className="text-accent hidden sm:inline">◆</span>}
+                  {i < 3 && <span className="text-accent hidden sm:inline">◆</span>}
                 </div>
               ),
             )}
