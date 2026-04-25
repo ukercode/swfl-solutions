@@ -9,7 +9,6 @@ import imgOwnerRep from "@/assets/service-owner-rep.jpg";
 import imgPM from "@/assets/service-pm.jpg";
 import imgRecovery from "@/assets/service-recovery.jpg";
 import imgOversight from "@/assets/service-oversight.jpg";
-import imgDevelopment from "@/assets/service-development.jpg";
 
 const services = [
   {
@@ -20,7 +19,7 @@ const services = [
     intro:
       "We are your single, trusted point of contact through every phase of your project — making sure your interests come first, every time.",
     body:
-      "An Owner's Representative is exclusively your advocate. We coordinate architects, engineers, contractors, and consultants so you don't have to. From design review to final closeout, we translate the technical, manage the politics, and make sure decisions reflect your goals — not the agenda of any vendor.",
+      "An Owner Representative is exclusively your advocate. We coordinate architects, engineers, contractors, and consultants so you don't have to. From design review to final closeout, we translate the technical, manage the politics, and make sure decisions reflect your goals — not the agenda of any vendor.",
     bullets: [
       "Independent advocacy, 100% loyalty to the owner",
       "Single point of contact for the entire project team",
@@ -80,23 +79,6 @@ const services = [
       "Punch list management and final closeout",
     ],
   },
-  {
-    id: "real-estate-development",
-    eyebrow: "Service 05",
-    title: "Real Estate Development",
-    image: imgDevelopment,
-    intro:
-      "Strategic guidance for landowners, investors, and developers — turning land and capital into successful, profitable projects.",
-    body:
-      "Whether you're developing a single luxury home or a multi-unit community, we bring the experience to make it work. We handle feasibility analysis, entitlements, cost estimating, lender negotiations, and the full development process — partnering with you from raw land through ribbon cutting.",
-    bullets: [
-      "Feasibility studies and highest-and-best-use analysis",
-      "Zoning, entitlements, and regulatory approvals",
-      "Cost estimating and pro-forma development",
-      "Bank and lender negotiations",
-      "Full-cycle development management",
-    ],
-  },
 ];
 
 const Services = () => {
@@ -105,8 +87,8 @@ const Services = () => {
       <PageHero
         image={heroImg}
         eyebrow="Our Services"
-        title="Construction & Development Services, Built Around You"
-        subtitle="Five core practices, one unified mission: deliver your project on time, on budget, and to the highest standard — with your interests protected at every step."
+        title="Owner Representation & Project Management Services, Built Around You"
+        subtitle="Our mission: deliver your project on time, on budget, and to the highest standard — with your interests protected at every step."
       />
 
       {/* Quick nav */}
