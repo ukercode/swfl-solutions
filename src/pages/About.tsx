@@ -6,15 +6,15 @@ import { CTABanner } from "@/components/site/CTABanner";
 import heroImg from "@/assets/hero-about.jpg";
 
 const values = [
-  { icon: Heart, title: "Loyalty", desc: "We work for you and only you. No kickbacks. No conflicts. No exceptions." },
+  { icon: Heart, title: "Loyalty", desc: "We work for you and what is in your best interests. No conflicts. No exceptions." },
   { icon: ShieldCheck, title: "Integrity", desc: "Honest assessments, transparent pricing, and clear communication — always." },
   { icon: Target, title: "Excellence", desc: "We hold every project — and every partner — to the highest professional standard." },
   { icon: Eye, title: "Vigilance", desc: "Proactive oversight prevents problems instead of just reacting to them." },
 ];
 
 const credentials = [
-  { label: "Professional", desc: "Certified construction & PM expertise" },
-  { label: "Experienced", desc: "Decades of Florida project history" },
+  { label: "Professional", desc: "​Representation and Project Managment" },
+  { label: "Experienced", desc: "Years of Florida project history" },
   { label: "Insured", desc: "Fully bonded and insured for your protection" },
   { label: "Independent", desc: "Exclusively on your side — never the contractor's" },
 ];
@@ -58,7 +58,7 @@ const About = () => {
           <SectionHeading
             eyebrow="Mission & Values"
             title="What Drives Every Decision We Make"
-            description="Our work is shaped by four core values that govern every project, every relationship, every recommendation."
+            description="Our work is shaped by honesty and integrity which are core values that govern every project, every relationship, every recommendation."
           />
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map(({ icon: Icon, title, desc }) => (
@@ -96,7 +96,7 @@ const About = () => {
             <div className="border-l-4 border-accent pl-6 py-2">
               <h3 className="font-serif text-xl font-semibold text-primary mb-2">For Homeowners</h3>
               <p className="text-foreground/80 leading-relaxed">
-                Building or renovating your home is one of the largest investments you'll ever make. We make sure you get what you paid for — without the late-night phone calls, surprise change orders, and stress that come with going it alone.
+                Building or renovating your home is one of the largest investments you'll ever make. We make sure you get what you paid for — without the lack of communication, crippling delays, surprise change orders, cost over runs and stress that comes with going it alone.
               </p>
             </div>
             <div className="border-l-4 border-accent pl-6 py-2">
@@ -136,12 +136,12 @@ const About = () => {
           <SectionHeading
             eyebrow="Leadership"
             title="Experienced Hands, Local Roots"
-            description="A growing team of construction, project management, and real estate professionals — proudly based in Englewood, Florida and serving the entire Southwest Florida region."
+            description="A growing team of construction, project management, and real estate professionals — proudly based in Englewood, Florida and serving the Southwest Florida region."
           />
           <div className="mt-12 max-w-3xl mx-auto bg-secondary border border-border rounded-lg p-10 text-center shadow-card-soft">
             <Users className="w-10 h-10 text-accent mx-auto mb-4" />
             <p className="text-foreground/80 leading-relaxed">
-              Want to learn more about our background and experience? We'd be happy to walk you through our credentials, project history, and references during your free consultation.
+              Want to learn more about our background and experience? We'd be happy to walk you through our background, project history, and references during your free consultation.
             </p>
           </div>
         </div>
