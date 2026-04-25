@@ -54,7 +54,7 @@ const Contact = () => {
                   <Icon className="w-7 h-7 text-accent-foreground" />
                 </div>
                 <p className="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-3">{label}</p>
-                <p className="font-serif text-xl lg:text-2xl text-primary font-semibold break-words leading-snug">
+                <p className="font-serif text-xl text-primary font-semibold break-words leading-snug lg:text-xl">
                   {value}
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground">{helper}</p>
