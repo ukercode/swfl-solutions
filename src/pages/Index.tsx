@@ -46,6 +46,11 @@ const services = [
     title: "Pre-Construction Advisory",
     desc: "Site assessment, design review, and contractor selection to set your project up for success before ground is broken.",
   },
+  {
+    icon: SearchCheck,
+    title: "Project Assessment",
+    desc: "A thorough evaluation of your project's current status, risks, and opportunities — so you can move forward with clarity and confidence.",
+  },
 ];
 
 const process = [
