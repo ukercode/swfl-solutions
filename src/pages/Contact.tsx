@@ -15,8 +15,8 @@ const contactCards = [
   {
     icon: Mail,
     label: "Email Us",
-    value: "contact.us@swflsolutions.com",
-    href: "mailto:contact.us@swflsolutions.com?subject=Project%20Inquiry",
+    value: "office@swflsolutions.com",
+    href: "mailto:office@swflsolutions.com?subject=Project%20Inquiry",
     helper: "We respond within 1 business day",
   },
   {
@@ -140,7 +140,7 @@ const Contact = () => {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent-glow hover:shadow-gold h-12 px-8"
             >
-              <a href="mailto:contact.us@swflsolutions.com?subject=Free%20Project%20Consultation&body=Hi%20SWFL%20Solutions%2C%0A%0AI%27d%20like%20to%20schedule%20a%20free%20project%20consultation.%0A%0AProject%20type%3A%20%0AProject%20location%3A%20%0ATimeline%3A%20%0ABest%20way%20to%20reach%20me%3A%20%0A%0AThanks%21">
+              <a href="mailto:office@swflsolutions.com?subject=Free%20Project%20Consultation&body=Hi%20SWFL%20Solutions%2C%0A%0AI%27d%20like%20to%20schedule%20a%20free%20project%20consultation.%0A%0AProject%20type%3A%20%0AProject%20location%3A%20%0ATimeline%3A%20%0ABest%20way%20to%20reach%20me%3A%20%0A%0AThanks%21">
                 Email Us Now <ArrowRight className="w-4 h-4" />
               </a>
             </Button>

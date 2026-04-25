@@ -10,7 +10,7 @@ export const Footer = () => {
             SWFL <span className="text-accent">Solutions</span>
           </Link>
           <p className="mt-4 text-sm text-primary-foreground/75 leading-relaxed">
-            Your trusted Owner Representative for construction and project management across Southwest Florida.
+            Your trusted Owner Representation in Southwest Florida.
           </p>
           <div className="mt-6 inline-block w-12 h-[2px] bg-accent" />
         </div>
@@ -44,8 +44,8 @@ export const Footer = () => {
             </li>
             <li className="flex items-start gap-3">
               <Mail className="w-4 h-4 mt-0.5 text-accent shrink-0" />
-              <a href="mailto:contact.us@swflsolutions.com" className="hover:text-accent transition-colors break-all">
-                contact.us@swflsolutions.com
+              <a href="mailto:office@swflsolutions.com" className="hover:text-accent transition-colors break-all">
+                office@swflsolutions.com
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -58,7 +58,7 @@ export const Footer = () => {
 
       <div className="border-t border-primary-foreground/15">
         <div className="container-prose py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-primary-foreground/60">
-          <p>© {new Date().getFullYear()} Southwest Florida Solutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Southwest Florida Solutions LLC. All rights reserved.</p>
           <p>Professional · Experienced · Insured · Exclusively on Your Side</p>
         </div>
       </div>
