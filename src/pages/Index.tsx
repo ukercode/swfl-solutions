@@ -39,7 +39,7 @@ const services = [
   {
     icon: HardHat,
     title: "Construction Oversight",
-    desc: "Independent on-site quality assurance, permitting coordination, and inspections so the work is done right — the first time.",
+    desc: "Independent on-site quality assurance. Permitting and inspection coordination; so the work is done right — the first time.",
   },
   {
     icon: Building2,
