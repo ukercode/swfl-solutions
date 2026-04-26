@@ -36,10 +36,10 @@ export const Navbar = () => {
       )}
     >
       <div className="container-prose flex items-center justify-between h-20 lg:h-28">
-        <Link to="/" className="group flex shrink-0 flex-col justify-center leading-tight">
+        <Link to="/" className="flex flex-col leading-tight group">
           <span
             className={cn(
-              "font-serif text-lg sm:text-xl lg:text-3xl font-semibold tracking-tight leading-none transition-colors",
+              "font-serif text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight transition-colors",
               transparent ? "text-primary-foreground" : "text-primary",
             )}
           >
