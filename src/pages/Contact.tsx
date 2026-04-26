@@ -73,10 +73,10 @@ const Contact = () => {
               <span className="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Service Area</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary leading-tight">
-              Proudly Serving All of Southwest Florida
+              Proudly Serving Southwest Florida
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              From Sarasota to the surrounding coastal communities — including Englewood, Venice, North Port, Port Charlotte, Punta Gorda and surrounding areas.
+              Located in Englewood and serving the surrounding communities — Sarasota County, Charlotte County, Manatee County and Lee County, including; Venice, North Port, Port Charlotte, Punta Gorda and surrounding areas.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Englewood", "Venice", "Sarasota", "North Port", "Port Charlotte", "Punta Gorda"].map(
