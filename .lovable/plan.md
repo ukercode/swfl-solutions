@@ -51,7 +51,7 @@ A polished, corporate-professional 4-page site for an Owner Representative firm 
 ### Page 4 — Contact (`src/pages/Contact.tsx`)
 - PageHero: "Schedule Your Free Project Assessment"
 - Three large contact cards: **Call** (941-249-5750), **Email** (office@swflsolutions.com), **Visit** (Englewood, FL 34224) — gold gradient icons, click-to-call/email/maps
-- **Service Area** block: "Proudly Serving All of Southwest Florida" with city pill badges (Englewood, Venice, Sarasota, North Port, Port Charlotte, Punta Gorda)
+- **Service Area** block: "Proudly Serving Southwest Florida" with city pill badges (Englewood, Venice, Sarasota, North Port, Port Charlotte, Punta Gorda) and county mentions.
 - **Response Promise** card: same-day calls, 1-business-day email, free consultation, no-obligation assessment
 - Final navy CTA section: "Ready to Get Started?" with prefilled mailto and tel buttons
 
