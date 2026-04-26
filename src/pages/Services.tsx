@@ -138,12 +138,12 @@ const Services = () => {
                   <p className="mt-4 text-muted-foreground leading-relaxed">{service.body}</p>
                   <ul className="mt-8 space-y-3">
                     {service.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-3">
-                        <span className="shrink-0 mt-1 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center">
-                          <Check className="w-3 h-3 text-accent" />
-                        </span>
-                        <span className="text-foreground/80">{b}</span>
-                      </li>
+      <li key={b} className="flex items-start gap-3">
+        <span className="shrink-0 mt-1 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center">
+          <Check className="w-3 h-3 text-accent" />
+        </span>
+        <span className="text-foreground/80">{b}</span>
+      </li>
                     ))}
                   </ul>
                   <Button
