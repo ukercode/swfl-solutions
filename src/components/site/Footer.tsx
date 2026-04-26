@@ -10,7 +10,7 @@ export const Footer = () => {
             SWFL <span className="text-accent">Solutions</span>
           </Link>
           <p className="mt-4 text-sm text-primary-foreground/75 leading-relaxed">
-            Your trusted Owner Representation in Southwest Florida.
+            Trusted Owner Representation in Southwest Florida.
           </p>
           <div className="mt-6 inline-block w-12 h-[2px] bg-accent" />
         </div>
