@@ -74,7 +74,7 @@ const services = [
     bullets: [
       "Permitting and entitlement coordination",
       "On-site inspections at every critical milestone",
-      "Code compliance and quality verification",
+      "On-site inspections at every critical milestone",
       "Photo documentation and progress reporting",
       "Punch list management and final closeout",
     ],
