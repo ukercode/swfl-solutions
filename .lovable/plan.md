@@ -1,62 +1,65 @@
 
 ## SWFL Solutions — Professional Website
 
-A polished, corporate-professional 4-page site for an Owner's Representative firm in Southwest Florida, designed to build trust with both individual homeowners and commercial clients.
+A polished, corporate-professional 4-page site for an Owner Representative firm in Southwest Florida (Englewood, FL), designed to build trust with homeowners, businesses/developers, and real estate investors.
 
 ### Design System
-- **Palette:** Deep navy (primary), warm gold accent, ivory/off-white background, charcoal text
-- **Typography:** Serif headlines (e.g., Playfair Display) + clean sans-serif body (Inter) for an upscale real estate/corporate feel
-- **Style:** Generous whitespace, large hero imagery, subtle gold dividers, refined cards with soft shadows, sticky transparent-to-solid nav
-- All tokens defined in `index.css` + `tailwind.config.ts` (HSL semantic tokens)
+- **Palette:** Deep navy (primary), warm gold accent, ivory/off-white background, charcoal text — all HSL semantic tokens
+- **Typography:** Serif headlines (Playfair Display) + clean sans-serif body (Inter)
+- **Style:** Generous whitespace, large hero imagery, gold dividers and accents, refined cards with soft shadows, sticky transparent-to-solid nav, gradient gold/navy utilities
+- All tokens defined in `src/index.css` + `tailwind.config.ts`
 
 ### Global Elements
-- **Sticky Navigation:** Brand "SOUTHWEST FLORIDA SOLUTIONS" with tagline "Owner Representative Project Management" · Links: Home / Services / About / Contact · Gold CTA button "Free Consultation"
-- **Footer:** Brand block, Services list, Company links, Contact info (941-249-5750 · contact.us@swflsolutions.com · Englewood, FL 34224)
+- **Sticky Navigation (`Navbar.tsx`):** Brand "SWFL Solutions" with tagline "Owner Representative · Project Management" · Links: Home / Services / About / Contact · Gold "Free Consultation" CTA · Transparent on home hero, solid elsewhere · Mobile hamburger menu
+- **Footer (`Footer.tsx`):** Brand block, Services list, Company links, Contact info (941-249-5750 · office@swflsolutions.com · Englewood, FL 34224)
 
-### Page 1 — Home
-1. **Hero:** Full-bleed image (professional overseeing a Florida construction site, freely-licensed). Headline "Working for You as Your Owner's Representative" + intro copy + two CTAs (Schedule Assessment / View Services)
-2. **Services Overview band:** Gold-accented horizontal list (Owner Rep · PM · Recovery · Oversight · Development)
-3. **"Your Advocate from Vision to Completion":** 6 service cards (consolidated from your copy — removed redundancy between A and C)
-4. **Process section:** "How We Work" — 5 numbered steps (Feasibility → Design → Permitting → Oversight → Closeout) in elegant timeline layout
-5. **Why SWFL Solutions:** "The Advantage of True Owner Advocacy" — 6 value cards (Cost Savings, Expert Management, Direct Control, Rapid Completion, Stress Reduction, Transparent Communication)
-6. **Final CTA banner:** "Ready to Protect Your Investment?" on navy with gold button
+### Page 1 — Home (`src/pages/Index.tsx`)
+1. **Hero:** Full-bleed image with gradient overlay, eyebrow "Southwest Florida · Since Day One", headline "Working for You as Your Owner Representative", intro copy + two CTAs (Schedule Free Assessment / View Our Services)
+2. **Services band:** Navy strip listing the 4 core services separated by gold diamonds
+3. **Services grid — "Your Advocate from Vision to Completion":** 6 cards
+   - Owner Representation
+   - Project Management
+   - Project Recovery
+   - Construction Oversight
+   - Pre-Construction Advisory
+   - Project Assessment
+4. **Process timeline — "How We Work" / "A Proven, Transparent Process":** 5 numbered steps
+   - 01 Analysis · 02 Design · 03 Coordination · 04 Oversight · 05 Closeout
+5. **Why SWFL Solutions — "The Advantage of True Owner Advocacy":** 6 value cards (Cost Savings, Expert Management, Direct Control, Rapid Completion, Stress Reduction, Transparent Communication)
+6. **Final CTA banner** (shared `CTABanner` component)
 
-### Page 2 — Services
-- Hero strip with page title + intro
-- Detailed sections for each of the 5 core services with supporting imagery (sourced from your provided image URLs + freely-licensed):
+### Page 2 — Services (`src/pages/Services.tsx`)
+- PageHero: "Owner Representation & Project Management Services - Built Around You"
+- Sticky in-page quick-nav linking the 4 service sections
+- 4 detailed service sections with image, intro, body, and bulleted sub-services (alternating background, image side-swap):
   - Owner Representation
-  - Project Management (incorporates assessment, oversight, contractor coordination)
+  - Project Management
   - Project Recovery
-  - Construction Oversight (incorporates permitting, inspections)
-  - Real Estate Development (incorporates feasibility, entitlements, cost estimation, bank negotiations)
-- Each section: image + heading + description + bulleted sub-services
-- Closing CTA
+  - Construction Oversight
+- Closing CTA: "Not Sure Where To Begin?"
 
-### Page 3 — About Us
-- Hero: "Our Journey" — Founded in Englewood, Florida
-- Mission/values block
-- "Why Choose Us" — emphasizes 100% loyalty to owner, B2B advantages
-- Credentials strip: Professional · Experienced · Insured · Exclusively on Your Side
-- Team/leadership placeholder section (you can fill later)
-- CTA to contact
+### Page 3 — About (`src/pages/About.tsx`)
+- PageHero: "Your Trusted Partner in Southwest Florida"
+- **Our Journey — "Built in Florida. Built on Trust."** Two-column intro about founding in Englewood and the SWFL service area
+- **Mission & Values — "What Drives Every Decision We Make":** 4 value cards (Loyalty, Integrity, Excellence, Vigilance)
+- **Why Choose Us — "100% Loyalty. Zero Conflicts."** Three audience callouts with gold left border:
+  - For Homeowners
+  - For Businesses & Developers
+  - For Real Estate Investors
+- Closing CTA: "Let's Talk About Your Project"
 
-### Page 4 — Contact
-- Hero with intro: "Schedule a free, no-obligation project assessment"
-- Three large contact cards: **Call** (941-249-5750), **Email** (contact.us@swflsolutions.com), **Visit** (Englewood, FL 34224) — each with icon, gold accent, click-to-call/email
-- Service area note for Southwest Florida
-- Hours / response-time reassurance
-- Large "Schedule Consultation" CTA (mailto link prefilled)
+### Page 4 — Contact (`src/pages/Contact.tsx`)
+- PageHero: "Schedule Your Free Project Assessment"
+- Three large contact cards: **Call** (941-249-5750), **Email** (office@swflsolutions.com), **Visit** (Englewood, FL 34224) — gold gradient icons, click-to-call/email/maps
+- **Service Area** block: "Proudly Serving All of Southwest Florida" with city pill badges (Englewood, Venice, Sarasota, North Port, Port Charlotte, Punta Gorda)
+- **Response Promise** card: same-day calls, 1-business-day email, free consultation, no-obligation assessment
+- Final navy CTA section: "Ready to Get Started?" with prefilled mailto and tel buttons
 
 ### Imagery
-- Pull the 6 service photos from your provided WordPress URLs (assessment, cost, PM, permitting, bank, contractor)
-- Supplement hero/about with freely-licensed Unsplash construction & Florida coastal architecture photos
+- Per-page hero images (`hero-home.jpg`, `hero-services.jpg`, `hero-about.jpg`, `hero-contact.jpg`)
+- Service section images (`service-owner-rep.jpg`, `service-pm.jpg`, `service-recovery.jpg`, `service-oversight.jpg`)
 - All images optimized and lazy-loaded
 
-### Content Organization Notes
-- Merged the duplicate "Project Assessment / Cost Estimation / Contractor Coordination" cards (file C) into the broader service descriptions (file A) to remove redundancy
-- Kept your wording intact for headlines, taglines, and value propositions
-- Renumbered service cards sequentially (your file had 01, 03, 04, 05, 06, 07)
-
-### Out of Scope (per your answers)
-- No Projects page or portfolio section
-- No backend / contact form storage — contact page surfaces phone, email, and location only
+### Out of Scope
+- No projects/portfolio page
+- No backend, contact form, or database — contact page surfaces phone, email, and location only
