@@ -24,7 +24,7 @@ const services = [
   {
     icon: Handshake,
     title: "Owner Representation",
-    desc: "We act as your dedicated advocate from the first idea to final walkthrough — protecting your interests at every decision point.",
+    desc: "We act as your dedicated advocate from conception to final walkthrough — protecting your interests and saving you time and money.",
   },
   {
     icon: ClipboardCheck,
@@ -49,7 +49,7 @@ const services = [
   {
     icon: SearchCheck,
     title: "Project Assessment",
-    desc: "A thorough evaluation of your project's current status, risks, and opportunities — so you can move forward with clarity and confidence.",
+    desc: "A thorough evaluation of your project status, cost, and time frame — so you can move forward with clarity and confidence.",
   },
 ];
 
