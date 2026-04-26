@@ -88,7 +88,7 @@ const Index = () => {
             <div className="flex items-center gap-3 mb-6 animate-fade-in-up">
               <span className="w-10 h-[2px] bg-accent" />
               <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-accent font-medium">
-                Southwest Florida · Since Day One
+                Southwest Florida
               </span>
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] animate-fade-in-up">

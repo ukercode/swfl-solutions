@@ -14,7 +14,7 @@ A polished, corporate-professional 4-page site for an Owner Representative firm 
 - **Footer (`Footer.tsx`):** Brand block, Services list, Company links, Contact info (941-249-5750 · office@swflsolutions.com · Englewood, FL 34224)
 
 ### Page 1 — Home (`src/pages/Index.tsx`)
-1. **Hero:** Full-bleed image with gradient overlay, eyebrow "Southwest Florida · Since Day One", headline "Working for You as Your Owner Representative", intro copy + two CTAs (Schedule Free Assessment / View Our Services)
+1. **Hero:** Full-bleed image with gradient overlay, eyebrow "Southwest Florida", headline "Working for You as Your Owner Representative", intro copy + two CTAs (Schedule Free Assessment / View Our Services)
 2. **Services band:** Navy strip listing the 4 core services separated by gold diamonds
 3. **Services grid — "Your Advocate from Vision to Completion":** 6 cards
    - Owner Representation
