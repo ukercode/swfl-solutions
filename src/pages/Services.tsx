@@ -94,7 +94,7 @@ const Services = () => {
       {/* Quick nav */}
       <section className="bg-secondary border-b border-border sticky top-20 lg:top-24 z-30 backdrop-blur-md">
         <div className="container-prose py-4 overflow-x-auto">
-          <div className="flex items-center gap-6 text-sm font-medium whitespace-nowrap justify-center">
+          <div className="flex items-center gap-6 text-sm font-medium whitespace-nowrap justify-start lg:justify-center">
             {services.map((s) => (
               <a
                 key={s.id}
