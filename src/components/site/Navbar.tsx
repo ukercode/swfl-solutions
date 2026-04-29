@@ -47,11 +47,11 @@ export const Navbar = () => {
           </span>
           <span
             className={cn(
-              "text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors",
+              "text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors whitespace-pre-line",
               transparent ? "text-primary-foreground/80" : "text-muted-foreground",
             )}
           >
-            Owner Representative · Project Management
+            Owner Representative{"\n"}Project Management
           </span>
         </Link>
         <a
