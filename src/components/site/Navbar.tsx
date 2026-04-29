@@ -36,7 +36,7 @@ export const Navbar = () => {
       )}
     >
       <div className="container-prose relative flex items-center justify-between h-20 lg:h-28">
-        <Link to="/" className="flex flex-col leading-tight group">
+        <Link to="/" className="flex flex-col leading-tight group" translate="no">
           <span
             className={cn(
               "font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight transition-colors",
@@ -56,6 +56,7 @@ export const Navbar = () => {
         </Link>
         <a
           href="tel:941-249-5750"
+          translate="no"
           className={cn(
             "hidden lg:block absolute left-1/2 -translate-x-1/2 font-serif text-3xl lg:text-4xl font-semibold tracking-tight transition-colors",
             transparent ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
