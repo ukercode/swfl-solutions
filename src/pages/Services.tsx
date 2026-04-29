@@ -70,7 +70,7 @@ const services = [
     intro:
       "Independent site inspections and contractor management for flawless, first-time execution.",
     body:
-      "We provide on-site quality assurance and inspection services that protect your investment. From architects and engineering, through framing, finishes, and final inspections; we verify that every phase meets the plans, the specs, and your expectations. Catching issues early is the cheapest insurance you can buy.",
+      "We provide on-site inspections and contractor management to protect your investment. From architects and engineering, through framing, finishes, and final inspections; we verify that every phase meets the plans, the specs, and your expectations. Catching issues early is the cheapest insurance you can buy.",
     bullets: [
       "Permitting and entitlement coordination",
       "On-site inspections at every critical milestone",
