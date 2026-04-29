@@ -142,7 +142,7 @@ const Index = () => {
         <div className="container-prose">
           <SectionHeading
             eyebrow="What We Do"
-            title="Your Advocate from Vision to Completion"
+            title="Your Professional Advocate from Vision to Completion"
             description={`What is an Owner Representative? We are the "Voice of the Owner," ensuring your interests are protected at every phase of the construction lifecycle. We don't replace your contractor—we hold them to the highest standard of accountability. Construction and real estate development are too important — and too expensive — to navigate alone. Our services are built around one principle: 100% loyalty to you, the owner.`}
           />
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
