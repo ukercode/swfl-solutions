@@ -35,7 +35,7 @@ export const Navbar = () => {
         transparent ? "bg-transparent" : "bg-background/95 backdrop-blur-md shadow-card-soft border-b border-border",
       )}
     >
-      <div className="container-prose flex items-center justify-between h-20 lg:h-28">
+      <div className="container-prose relative flex items-center justify-between h-20 lg:h-28">
         <Link to="/" className="flex flex-col leading-tight group">
           <span
             className={cn(
@@ -57,7 +57,7 @@ export const Navbar = () => {
         <a
           href="tel:941-249-5750"
           className={cn(
-            "hidden sm:block ml-auto lg:ml-0 lg:mr-8 font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight transition-colors text-right",
+            "hidden lg:block absolute left-1/2 -translate-x-1/2 font-serif text-3xl lg:text-4xl font-semibold tracking-tight transition-colors",
             transparent ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
           )}
         >
