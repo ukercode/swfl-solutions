@@ -35,37 +35,50 @@ export const Navbar = () => {
         transparent ? "bg-transparent" : "bg-background/95 backdrop-blur-md shadow-card-soft border-b border-border",
       )}
     >
-      <div className="container-prose relative flex items-center justify-between h-20 lg:h-28">
-        <Link to="/" className="flex flex-col leading-tight group" translate="no">
-          <span
+      <div className="container-prose flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 lg:gap-6 py-4 lg:py-0 lg:h-28">
+        <div className="flex items-center justify-between lg:block">
+          <Link to="/" className="flex flex-col leading-tight group" translate="no">
+            <span
+              className={cn(
+                "font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight transition-colors leading-none",
+                transparent ? "text-primary-foreground" : "text-primary",
+              )}
+            >
+              SWFL <span className="text-accent">Solutions</span>
+            </span>
+            <span
+              className={cn(
+                "mt-1 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors",
+                transparent ? "text-primary-foreground/80" : "text-muted-foreground",
+              )}
+            >
+              Owner Representative · Project Management
+            </span>
+          </Link>
+          <button
             className={cn(
-              "font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight transition-colors",
+              "lg:hidden p-2 rounded-md transition-colors",
               transparent ? "text-primary-foreground" : "text-primary",
             )}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
           >
-            SWFL <span className="text-accent">Solutions</span>
-          </span>
-          <span
-            className={cn(
-              "text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors",
-              transparent ? "text-primary-foreground/80" : "text-muted-foreground",
-            )}
-          >
-            Owner Representative · Project Management
-          </span>
-        </Link>
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
         <a
           href="tel:941-249-5750"
           translate="no"
           className={cn(
-            "hidden lg:block absolute left-1/2 -translate-x-1/2 font-serif text-3xl lg:text-4xl font-semibold tracking-tight transition-colors",
+            "font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight transition-colors leading-none lg:flex-1 lg:text-center",
             transparent ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
           )}
         >
           941-249-5750
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-end gap-8">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -93,16 +106,6 @@ export const Navbar = () => {
           </Button>
         </nav>
 
-        <button
-          className={cn(
-            "lg:hidden p-2 rounded-md transition-colors",
-            transparent ? "text-primary-foreground" : "text-primary",
-          )}
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
 
       {open && (
