@@ -57,7 +57,7 @@ const process = [
   { num: "01", title: "Analysis", desc: "Project budget, scope, and evaluation." },
   { num: "02", title: "Design", desc: "Architect & engineer coordination with value engineering." },
   { num: "03", title: "Coordination", desc: "Contractor bidding and scheduling." },
-  { num: "04", title: "Oversight", desc: "On-site management, quality control, and reporting." },
+  { num: "04", title: "Oversight", desc: "On-site management, verification, and reporting." },
   { num: "05", title: "Closeout", desc: "Final inspections, punch list, and warranty handoff." },
 ];
 
