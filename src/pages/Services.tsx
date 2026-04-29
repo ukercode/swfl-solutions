@@ -68,7 +68,7 @@ const services = [
     title: "Construction Oversight",
     image: imgOversight,
     intro:
-      "Independent eyes on your project — making sure the work is done right, the first time, and to the standards you're paying for.",
+      "Independent site inspections and contractor management for flawless, first-time execution",
     body:
       "We provide on-site quality assurance and inspection services that protect your investment. From architects and engineering, through framing, finishes, and final inspections; we verify that every phase meets the plans, the specs, and your expectations. Catching issues early is the cheapest insurance you can buy.",
     bullets: [
