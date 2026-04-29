@@ -39,7 +39,7 @@ const services = [
   {
     icon: HardHat,
     title: "Construction Oversight",
-    desc: "Independent site inspections and contractor management so issues are caught early.",
+    desc: "Independent site inspections and contractor management so issues are caught early and the project progresses smoothly.",
   },
   {
     icon: Building2,
