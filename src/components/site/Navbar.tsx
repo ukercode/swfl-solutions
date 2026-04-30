@@ -35,50 +35,61 @@ export const Navbar = () => {
         transparent ? "bg-transparent" : "bg-background/95 backdrop-blur-md shadow-card-soft border-b border-border",
       )}
     >
-      <div className="container-prose flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 lg:gap-6 py-4 lg:py-0 lg:h-28 lg:pb-8">
-        <div className="flex items-center justify-between lg:block">
-          <Link to="/" className="flex flex-col leading-tight group" translate="no">
-            <span
-              className={cn(
-                "font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight transition-colors leading-none",
-                transparent ? "text-primary-foreground" : "text-primary",
-              )}
-            >
-              SWFL <span className="text-accent">Solutions</span>
-            </span>
-            <span
-              className={cn(
-                "mt-1 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors",
-                transparent ? "text-primary-foreground/80" : "text-muted-foreground",
-              )}
-            >
-              Owner Representative · Project Management
-            </span>
-          </Link>
-          <button
+      <div className="container-prose flex items-center md:items-end justify-between gap-3 md:gap-6 py-3 md:py-0 md:h-24 lg:h-28 md:pb-6 lg:pb-8">
+        <Link to="/" className="flex flex-col leading-tight group min-w-0 flex-shrink" translate="no">
+          <span
             className={cn(
-              "lg:hidden p-2 rounded-md transition-colors",
+              "font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight transition-colors leading-none",
               transparent ? "text-primary-foreground" : "text-primary",
             )}
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
           >
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+            SWFL <span className="text-accent">Solutions</span>
+          </span>
+          <span
+            className={cn(
+              "mt-1 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.18em] font-medium transition-colors hidden sm:block",
+              transparent ? "text-primary-foreground/80" : "text-muted-foreground",
+            )}
+          >
+            Owner Representative · Project Management
+          </span>
+        </Link>
 
         <a
           href="tel:941-249-5750"
           translate="no"
           className={cn(
-            "font-serif text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap lg:flex-1 lg:text-center",
+            "hidden md:block font-serif text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap md:flex-1 md:text-center",
             transparent ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
           )}
         >
           941-249-5750
         </a>
 
-        <nav className="hidden lg:flex items-end gap-4 xl:gap-6">
+        <a
+          href="tel:941-249-5750"
+          translate="no"
+          aria-label="Call 941-249-5750"
+          className={cn(
+            "md:hidden inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-medium text-sm transition-colors min-h-[44px]",
+            transparent ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
+          )}
+        >
+          <Phone className="w-4 h-4" /> Call
+        </a>
+
+        <button
+          className={cn(
+            "md:hidden p-2 rounded-md transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center",
+            transparent ? "text-primary-foreground" : "text-primary",
+          )}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        <nav className="hidden md:flex items-end gap-3 lg:gap-4 xl:gap-6">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
