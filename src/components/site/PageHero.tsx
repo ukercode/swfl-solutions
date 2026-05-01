@@ -27,7 +27,7 @@ export const PageHero = ({ image, eyebrow, title, subtitle, children }: PageHero
             </span>
           </div>
         )}
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight max-w-4xl animate-fade-in-up whitespace-pre-line">
+        <h1 className="font-serif text-4xl sm:text-5xl font-semibold leading-tight max-w-4xl animate-fade-in-up whitespace-pre-line lg:text-5xl">
           {title}
         </h1>
         {subtitle && (
