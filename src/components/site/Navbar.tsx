@@ -39,7 +39,7 @@ export const Navbar = () => {
         <Link to="/" className="flex flex-col leading-tight group flex-shrink-0 whitespace-nowrap" translate="no">
           <span
             className={cn(
-              "font-serif text-2xl sm:text-3xl nav:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap",
+              "font-serif text-3xl nav:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap",
               transparent ? "text-primary-foreground" : "text-primary",
             )}
           >
