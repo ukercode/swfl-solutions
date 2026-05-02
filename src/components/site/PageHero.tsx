@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 export const PageHero = ({ image, eyebrow, title, subtitle, children }: PageHeroProps) => {
   return (
-    <section className="relative h-[60vh] min-h-[440px] flex items-center text-primary-foreground overflow-hidden">
+    <section className="relative h-[60vh] min-h-[440px] flex items-center text-primary-foreground overflow-hidden pb-12 nav:pb-16">
       <img
         src={image}
         alt=""
