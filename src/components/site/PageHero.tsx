@@ -18,7 +18,7 @@ export const PageHero = ({ image, eyebrow, title, subtitle, children }: PageHero
         loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-hero" />
-      <div className="container-prose relative z-10 pt-20">
+      <div className="container-prose relative z-10 pt-32 nav:pt-36 lg:pt-40">
         {eyebrow && (
           <div className="flex items-center gap-3 mb-5 animate-fade-in-up">
             <span className="w-10 h-[2px] bg-accent" />
