@@ -114,8 +114,8 @@ const Services = () => {
           <section
             key={service.id}
             id={service.id}
-            style={{ scrollMarginTop: "calc(var(--header-h, 68px) + 88px)" }}
-            className={`scroll-mt-[156px] nav:scroll-mt-[200px] lg:scroll-mt-[224px] py-20 lg:py-28 ${i % 2 === 1 ? "bg-secondary" : "bg-background"}`}
+            style={{ scrollMarginTop: "calc(var(--header-h, 68px) + 44px)" }}
+            className={`scroll-mt-[112px] nav:scroll-mt-[148px] lg:scroll-mt-[168px] py-20 lg:py-28 ${i % 2 === 1 ? "bg-secondary" : "bg-background"}`}
           >
             <div className="container-prose">
               <div
