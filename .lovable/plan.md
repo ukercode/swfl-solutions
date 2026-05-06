@@ -1,52 +1,36 @@
-# Responsive Layout Testing Plan
+## Astro Port: Header + Home Hero
 
-Visual verification of all four pages across desktop, tablet, and mobile viewports in both portrait and landscape orientations. Read-only — no code changes unless you approve fixes after the audit.
+I'll deliver Astro v6 + Tailwind v4 versions of the Navbar and the homepage Hero, using the `global.css` design tokens already shared. Components will be `.astro` files (static markup + scoped `<script>` for interactivity) so they work with zero client framework — no React needed.
 
-## Pages tested
-1. Home (`/`)
-2. Services (`/services`)
-3. About (`/about`)
-4. Contact (`/contact`)
+### Files I'll provide
 
-## Viewports per page (6 sizes)
+1. **`src/components/Navbar.astro`**
+   - Same layout: logo (SWFL Solutions + tagline), centered phone number, mobile call button, hamburger toggle, desktop nav links, gold "Free Consultation" CTA.
+   - Replaces `react-router-dom` `Link`/`NavLink` with native `<a href>`. Active-link styling computed at render time from `Astro.url.pathname`.
+   - Replaces React `useState`/`useEffect` with a small inline `<script>`:
+     - Toggles `scrolled` class on `<header>` via a scroll listener.
+     - Toggles mobile menu open/close + swaps Menu/X icons.
+   - Transparent-on-home behavior: server-renders transparent only when `Astro.url.pathname === "/"`, then the scroll script flips it on scroll.
+   - Icons: inline SVGs for `Menu`, `X`, `Phone` (no `lucide-react` dependency). I'll note that `astro-icon` + `lucide` is an optional swap.
+   - Uses the same Tailwind classes you have today (`container-prose`, `nav:` breakpoint, `bg-accent`, `shadow-card-soft`, etc.) — all resolved by the `global.css` `@theme inline` block.
 
-| Class | Portrait | Landscape |
-|-------|----------|-----------|
-| Desktop | 1920×1080 | 1366×768 |
-| Tablet | 820×1180 (iPad Air) | 1180×820 |
-| Mobile | 390×844 (iPhone 14) | 844×390 |
+2. **`src/components/Hero.astro`**
+   - Port of the homepage hero section in `src/pages/Index.tsx` (lines 77–122): full-viewport image, gradient overlay, eyebrow, headline with gold accent span, subhead, two CTAs.
+   - Accepts props: `image` (ImageMetadata), `eyebrow`, `title`, `accentTitle`, `subtitle`, plus optional `primaryCta` / `secondaryCta` `{ label, href }`.
+   - Uses Astro's `<Image />` from `astro:assets` for the hero image (responsive + optimized).
+   - Same animation classes (`animate-fade-in-up`) — these come from `global.css`.
 
-Total: **4 pages × 6 viewports = 24 screenshots**
+3. **`src/pages/index.astro` (snippet)**
+   - Minimal example showing how to import `Layout.astro`, `Navbar.astro`, and `Hero.astro` and pass the hero image from `src/assets/hero-home.jpg`.
 
-## What I'll inspect on each capture
+### Notes / caveats I'll include
 
-- **Navbar**: logo + phone number + nav links alignment; mobile hamburger toggle (open + closed on mobile sizes)
-- **Hero**: headline wrapping, CTA button stacking, background crop, no text clipped under fixed nav
-- **Section headings**: line breaks and readability of long descriptions (e.g. "Voice of the Owner" paragraph)
-- **Service cards**: column count transitions (3 → 2 → 1)
-- **Process timeline**: 5-col → 3-col → 1-col, connector lines
-- **Advantages grid**: icon + text alignment
-- **Footer**: column collapse and spacing
-- **Universal checks**: horizontal scroll, overlapping elements, awkward whitespace, tap target sizes (≥44px) on mobile, illegible text
+- **No React runtime** — these are pure Astro components. If you'd rather keep them as `.tsx` islands (`client:load`), say the word and I'll output that variant instead.
+- **Routing**: Astro is file-based, so `/services` ⇒ `src/pages/services.astro`, etc. Active-link detection uses `Astro.url.pathname`.
+- **Phone tap-to-call** and `translate="no"` attributes are preserved.
+- **Fonts**: already loaded via `@font-face` in `global.css` from the previous step.
+- **Icons**: inline SVGs by default. I'll add a short "swap to `astro-icon`" snippet at the end.
 
-## Process
+### Open question
 
-1. Open browser at sandbox preview
-2. For each page → resize to each of the 6 viewports → screenshot → review
-3. On mobile sizes, also open the hamburger menu and screenshot it
-4. Compile findings into a single report grouped by **Severity** (Critical / Minor / Polish) and **Page/Viewport**
-
-## Deliverable
-
-A written report listing every issue found with:
-- Page + viewport where it occurs
-- What's wrong (with screenshot reference)
-- Suggested fix
-
-After you review the report, you can tell me which issues to fix and I'll switch to build mode to apply the changes.
-
-## Notes
-
-- The browser tool snaps to its nearest supported size, so actual captures may be ±a few pixels from the targets above (e.g. 390×844 is exact; iPad Air 820×1180 is supported exactly).
-- I won't interact with forms (Contact page) destructively — only visual inspection plus opening the page.
-- This is purely a visual audit; no code changes happen during the plan execution.
+Want the Hero to be **generic + reusable** (props-driven, as above) or a **one-off `HomeHero.astro`** with the exact homepage copy hardcoded? Default plan is generic + reusable — confirm or override when you hit Implement.
