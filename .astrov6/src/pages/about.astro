@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import CTABanner from "../components/CTABanner.astro";
+import heroImg from "../assets/hero-about.jpg";
+
+const values = [
+  { icon: "lucide:heart", title: "Loyalty", desc: "We work for you and what is in your best interests. No conflicts. No exceptions." },
+  { icon: "lucide:shield-check", title: "Integrity", desc: "Honest assessments, transparent pricing, and clear communication — always." },
+  { icon: "lucide:target", title: "Excellence", desc: "We hold every project — and every partner — to the highest professional standard." },
+  { icon: "lucide:eye", title: "Vigilance", desc: "Proactive oversight prevents problems instead of just reacting to them." },
+];
+---
+<BaseLayout title="About | SWFL Solutions" description="Independent owner representation founded to protect Southwest Florida property owners and developers.">
+  <PageHero
+    image={heroImg}
+    eyebrow="About Us"
+    title="Your Trusted Partner in Southwest Florida"
+    subtitle="SWFL Solutions was built on a simple belief: every owner deserves an expert in their corner — one who answers only to them."
+  />
+
+  <section class="py-20 lg:py-28 bg-background">
+    <div class="container-prose grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-[2px] bg-accent"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Our Journey</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary leading-tight">Built in Florida. Built on Trust.</h2>
+      </div>
+      <div class="space-y-5 text-foreground/80 leading-relaxed text-base lg:text-lg">
+        <p>SWFL Solutions was founded to fill a critical gap in the construction and real estate market -- independent, owner representation. Too many homeowners and businesses had been burned by projects that ran late, over budget, or fell short of what was promised — often because they had no one in their corner managing their interests.</p>
+        <p>We serve clients in Southwest Florida — from individual homeowners building their dream residence to commercial developers managing multi-property portfolios. Whether the project is large or small, residential or commercial, our role stays the same: making sure your vision and investment is secure, on budget, and on track from start to finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-secondary">
+    <div class="container-prose">
+      <SectionHeading
+        eyebrow="Mission & Values"
+        title="What Drives Every Decision We Make"
+        description="Our work is shaped by honesty and integrity which are core values that govern every project, every relationship, every recommendation."
+      />
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {values.map((v) => (
+          <div class="bg-card border border-border rounded-lg p-7 shadow-card-soft hover:shadow-elegant transition-all hover:-translate-y-1 duration-500">
+            <div class="w-12 h-12 rounded-md bg-gradient-gold flex items-center justify-center mb-5 shadow-gold">
+              <Icon name={v.icon} class="w-6 h-6 text-accent-foreground" />
+            </div>
+            <h3 class="font-serif text-xl font-semibold text-primary mb-2">{v.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-background">
+    <div class="container-prose grid lg:grid-cols-5 gap-12 items-start">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-[2px] bg-accent"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Why Choose Us</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary leading-tight">100% Loyalty. Zero Conflicts.</h2>
+        <p class="mt-5 text-muted-foreground leading-relaxed">Most construction problems trace back to one root cause: the owner had no expert advocate. We exist to solve that — for individuals and businesses alike.</p>
+      </div>
+      <div class="lg:col-span-3 space-y-6">
+        <div class="border-l-4 border-accent pl-6 py-2">
+          <h3 class="font-serif text-xl font-semibold text-primary mb-2">For Homeowners</h3>
+          <p class="text-foreground/80 leading-relaxed">Building or renovating your home is one of the largest investments you'll ever make. We make sure you get what you paid for — without the lack of communication, crippling delays, surprise change orders, cost over runs and stress that comes with going it alone.</p>
+        </div>
+        <div class="border-l-4 border-accent pl-6 py-2">
+          <h3 class="font-serif text-xl font-semibold text-primary mb-2">For Businesses, HOAs & Realestate Developers</h3>
+          <p class="text-foreground/80 leading-relaxed">Commercial projects demand professional oversight. We bring the discipline, documentation, and decision support that protects your capital and accelerates your timeline — with the discretion and reliability your business requires.</p>
+        </div>
+        <div class="border-l-4 border-accent pl-6 py-2">
+          <h3 class="font-serif text-xl font-semibold text-primary mb-2">For Real Estate Investors</h3>
+          <p class="text-foreground/80 leading-relaxed">From feasibility through closeout, we provide the project intelligence and execution muscle to maximize ROI — and we know the Southwest Florida market intimately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    title="Let's Talk About Your Project"
+    description="Whether you're starting from scratch or rescuing a project that's gone sideways, we're ready to listen."
+  />
+</BaseLayout>

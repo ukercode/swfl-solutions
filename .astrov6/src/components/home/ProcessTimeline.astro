@@ -1,0 +1,31 @@
+---
+import SectionHeading from "../SectionHeading.astro";
+const steps = [
+  { num: "01", title: "Analysis", desc: "Project budget, scope, and evaluation." },
+  { num: "02", title: "Design", desc: "Architect & engineer coordination with value engineering." },
+  { num: "03", title: "Coordination", desc: "Contractor bidding and scheduling." },
+  { num: "04", title: "Oversight", desc: "On-site management, verification, and reporting." },
+  { num: "05", title: "Closeout", desc: "Final inspections, punch list, and warranty handoff." },
+];
+---
+<section class="py-20 lg:py-28 bg-secondary">
+  <div class="container-prose">
+    <SectionHeading
+      eyebrow="How We Work"
+      title="A Proven, Transparent Process"
+      description="Every successful project follows a disciplined path. Here's how we guide yours from concept to keys in hand."
+    />
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
+      {steps.map((step, i) => (
+        <div class="relative">
+          <div class="bg-card border border-border rounded-lg p-6 h-full shadow-card-soft hover:shadow-elegant transition-shadow">
+            <div class="font-serif text-5xl font-bold text-accent/90 mb-3 leading-none">{step.num}</div>
+            <h3 class="font-serif text-xl font-semibold text-primary mb-2">{step.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+          </div>
+          {i < steps.length - 1 && <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-[2px] bg-accent/40 z-10"></div>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

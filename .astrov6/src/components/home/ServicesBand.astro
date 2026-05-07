@@ -1,0 +1,15 @@
+---
+const items = ["Owner Representation", "Project Management", "Project Recovery", "Construction Oversight"];
+---
+<section class="bg-primary text-primary-foreground border-y border-accent/20">
+  <div class="container-prose py-6 lg:py-8">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm uppercase tracking-[0.18em] font-medium">
+      {items.map((item, i) => (
+        <div class="flex items-center gap-8">
+          <span class="text-primary-foreground/90">{item}</span>
+          {i < items.length - 1 && <span class="text-accent hidden sm:inline">◆</span>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

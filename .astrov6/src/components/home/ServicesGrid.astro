@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionHeading from "../SectionHeading.astro";
+
+const services = [
+  { icon: "lucide:handshake", title: "Owner Representation", desc: "We act as your dedicated advocate from conception to final walkthrough — protecting your interests and saving you time and money." },
+  { icon: "lucide:clipboard-check", title: "Project Management", desc: "End-to-end oversight of schedule, budget, scope, and quality — a single point of accountability you can trust." },
+  { icon: "lucide:life-buoy", title: "Project Recovery", desc: "Stalled, over-budget, or troubled project? We diagnose the issues and execute a clear plan to bring it back on track." },
+  { icon: "lucide:hard-hat", title: "Construction Oversight", desc: "Independent site inspections and contractor management so issues are caught early and the project progresses smoothly." },
+  { icon: "lucide:building-2", title: "Pre-Construction Advisory", desc: "Site assessment, design review, and contractor selection to set your project up for success before ground is broken." },
+  { icon: "lucide:search-check", title: "Project Assessment", desc: "A thorough evaluation of your project status, cost, and time frame — so you can move forward with clarity and confidence." },
+];
+---
+<section class="py-20 lg:py-28 bg-background">
+  <div class="container-prose">
+    <SectionHeading
+      eyebrow="What We Do"
+      title="Your Professional Advocate from Vision to Completion"
+      description={`What is an Owner Representative? We are the “Voice of the Owner,” protecting your interests through every phase of your construction or real estate project. We don’t replace your contractor — we provide independent oversight, clear communication, and accountability so your project stays aligned with your goals. Construction is too important — and too expensive — to navigate alone. Our services are built around one principle: 100% loyalty to you, the owner.`}
+      description2="While every project is different, the cost of independent owner representation is often small compared with the cost of preventable mistakes, unmanaged change orders, poor communication, schedule and construction delays. Our role is to help protect your investment before small issues become expensive problems."
+    />
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <div class="group relative bg-card border border-border rounded-lg p-8 shadow-card-soft hover:shadow-elegant transition-all duration-500 hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-lg bg-secondary flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-500">
+            <Icon name={s.icon} class="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors duration-500" />
+          </div>
+          <h3 class="font-serif text-2xl font-semibold text-primary mb-3">{s.title}</h3>
+          <p class="text-muted-foreground leading-relaxed">{s.desc}</p>
+          <div class="mt-6 inline-flex items-center text-sm font-medium text-accent">
+            <a href="/services" class="inline-flex items-center gap-2 hover:gap-3 transition-all">
+              Learn more <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
