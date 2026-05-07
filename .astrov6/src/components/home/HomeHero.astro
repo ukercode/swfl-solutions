@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import heroImg from "../../assets/hero-home.jpg";
+---
+<section class="relative min-h-[100vh] flex items-center text-primary-foreground overflow-hidden">
+  <Image src={heroImg} alt="Owner representative reviewing blueprints at a Florida luxury home construction site" class="absolute inset-0 w-full h-full object-cover" loading="eager" widths={[768, 1280, 1920]} sizes="100vw" />
+  <div class="absolute inset-0 bg-gradient-hero"></div>
+  <div class="container-prose relative z-10 pt-24 pb-16">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-6 animate-fade-in-up">
+        <span class="w-10 h-[2px] bg-accent"></span>
+        <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-accent font-medium">Southwest Florida</span>
+      </div>
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] animate-fade-in-up">
+        Working for You as Your <span class="text-accent">Owner Representative</span>
+      </h1>
+      <p class="mt-7 text-lg sm:text-xl text-primary-foreground/85 leading-relaxed max-w-2xl animate-fade-in-up">
+        From feasibility to final walkthrough, SWFL Solutions protects your investment with independent expertise — exclusively on your side.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-accent text-accent-foreground hover:bg-accent-glow hover:shadow-gold font-medium transition-all text-base">
+          Schedule Free Assessment <Icon name="lucide:arrow-right" class="w-4 h-4" />
+        </a>
+        <a href="/services" class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md border border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-medium transition-all text-base">
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

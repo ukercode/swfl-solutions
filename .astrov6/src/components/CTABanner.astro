@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Ready to Protect Your Investment?",
+  description = "Schedule a free, no-obligation project assessment. Discover how true owner advocacy can save you time, money, and stress.",
+} = Astro.props;
+---
+<section class="relative bg-gradient-navy text-primary-foreground overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-accent blur-3xl"></div>
+  </div>
+  <div class="container-prose relative py-20 lg:py-24 text-center">
+    <div class="flex items-center justify-center gap-3 mb-5">
+      <span class="w-10 h-[2px] bg-accent"></span>
+      <span class="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Get Started</span>
+      <span class="w-10 h-[2px] bg-accent"></span>
+    </div>
+    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold max-w-3xl mx-auto leading-tight">{title}</h2>
+    <p class="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto">{description}</p>
+    <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact" class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-accent text-accent-foreground hover:bg-accent-glow hover:shadow-gold font-medium transition-all">
+        Schedule Free Assessment <Icon name="lucide:arrow-right" class="w-4 h-4" />
+      </a>
+      <a href="/services" class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-medium transition-all">
+        Explore Services
+      </a>
+    </div>
+  </div>
+</section>

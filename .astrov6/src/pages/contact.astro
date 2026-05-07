@@ -1,0 +1,98 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import heroImg from "../assets/hero-contact.jpg";
+
+const contactCards = [
+  { icon: "lucide:phone", label: "Call Us", value: "941-249-5750", href: "tel:9412495750", helper: "Mon–Fri, 8 AM – 6 PM ET" },
+  { icon: "lucide:mail", label: "Email Us", value: "office@swflsolutions.com", href: "mailto:office@swflsolutions.com?subject=Project%20Inquiry", helper: "We respond within one business day" },
+  { icon: "lucide:map-pin", label: "Visit Us", value: "Englewood, FL 34224", href: "https://maps.google.com/?q=Englewood+FL+34224", helper: "By appointment only" },
+];
+---
+<BaseLayout title="Contact | SWFL Solutions" description="Schedule your free Southwest Florida project assessment. Call 941-249-5750 or email office@swflsolutions.com.">
+  <PageHero
+    image={heroImg}
+    eyebrow="Contact"
+    title="Schedule Your Free Project Assessment"
+    subtitle="No obligation, no sales pitch — just a candid conversation about your project, your goals, and how we can help."
+  />
+
+  <section class="py-20 lg:py-28 bg-background">
+    <div class="container-prose">
+      <div class="grid md:grid-cols-3 gap-6">
+        {contactCards.map((c) => (
+          <a
+            href={c.href}
+            target={c.href.startsWith("http") ? "_blank" : undefined}
+            rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            class="group bg-card border border-border rounded-lg p-8 lg:p-10 shadow-card-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-500 text-center"
+          >
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-gold flex items-center justify-center mb-6 shadow-gold group-hover:scale-110 transition-transform duration-500">
+              <Icon name={c.icon} class="w-7 h-7 text-accent-foreground" />
+            </div>
+            <p class="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-3">{c.label}</p>
+            <p class="font-serif text-xl text-primary font-semibold break-words leading-snug lg:text-xl">{c.value}</p>
+            <p class="mt-3 text-sm text-muted-foreground">{c.helper}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20 bg-secondary">
+    <div class="container-prose grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-[2px] bg-accent"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-accent font-semibold">Service Area</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-primary leading-tight">Proudly Serving Southwest Florida</h2>
+        <p class="mt-5 text-muted-foreground leading-relaxed">
+          Located in Englewood and serving the surrounding communities — Sarasota County, Charlotte County, Manatee County and Lee County, including; Venice, North Port, Port Charlotte, Punta Gorda and surrounding areas.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {["Englewood", "Venice", "Sarasota", "North Port", "Port Charlotte", "Punta Gorda"].map((city) => (
+            <span class="px-3 py-1 text-xs font-medium bg-card border border-border text-foreground/80 rounded-full">{city}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="bg-card border border-border rounded-lg p-8 shadow-card-soft">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="shrink-0 w-12 h-12 rounded-md bg-secondary flex items-center justify-center">
+            <Icon name="lucide:clock" class="w-6 h-6 text-primary" />
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-semibold text-primary">Our Response Promise</h3>
+            <p class="text-sm text-muted-foreground mt-1">Fast, professional, and personal.</p>
+          </div>
+        </div>
+        <ul class="space-y-4 text-sm">
+          <li class="flex justify-between border-b border-border pb-3"><span class="text-muted-foreground">Phone calls</span><span class="font-medium text-primary">Same-day response</span></li>
+          <li class="flex justify-between border-b border-border pb-3"><span class="text-muted-foreground">Email inquiries</span><span class="font-medium text-primary">Within one business day</span></li>
+          <li class="flex justify-between border-b border-border pb-3"><span class="text-muted-foreground">Initial consultation</span><span class="font-medium text-primary">Free of charge</span></li>
+          <li class="flex justify-between"><span class="text-muted-foreground">Project assessment</span><span class="font-medium text-primary">No obligation</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative bg-gradient-navy text-primary-foreground py-20 lg:py-24">
+    <div class="container-prose text-center">
+      <Icon name="lucide:message-circle" class="w-12 h-12 text-accent mx-auto mb-6" />
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight max-w-3xl mx-auto">Ready to Get Started?</h2>
+      <p class="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto">Send us a quick note about your project. We'll be in touch within one business day to schedule your free consultation.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:office@swflsolutions.com?subject=Free%20Project%20Consultation&body=Hi%20SWFL%20Solutions%2C%0A%0AI%27d%20like%20to%20schedule%20a%20free%20project%20consultation.%0A%0AProject%20type%3A%20%0AProject%20location%3A%20%0ATimeline%3A%20%0ABest%20way%20to%20reach%20me%3A%20%0A%0AThanks%21"
+           class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-accent text-accent-foreground hover:bg-accent-glow hover:shadow-gold font-medium transition-all">
+          Email Us Now <Icon name="lucide:arrow-right" class="w-4 h-4" />
+        </a>
+        <a href="tel:9412495750"
+           class="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-medium transition-all">
+          <Icon name="lucide:phone" class="w-4 h-4" /> Call 941-249-5750
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,164 @@
+---
+import { Icon } from "astro-icon/components";
+
+const navItems = [
+  { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+];
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isHome = pathname === "/";
+const isActive = (to: string) => (to === "/" ? pathname === "/" : pathname === to || pathname.startsWith(to + "/"));
+---
+<header
+  id="site-header"
+  data-home={isHome ? "true" : "false"}
+  class:list={[
+    "fixed top-0 inset-x-0 z-50 transition-all duration-300",
+    isHome ? "bg-transparent" : "bg-background/95 backdrop-blur-md shadow-card-soft border-b border-border",
+  ]}
+>
+  <div class="container-prose flex items-center nav:items-end justify-between gap-3 nav:gap-6 py-3 nav:py-0 nav:h-24 lg:h-28 nav:pb-6 lg:pb-8">
+    <a href="/" class="flex flex-col leading-tight group flex-shrink-0 whitespace-nowrap" translate="no">
+      <span
+        data-logo
+        class:list={[
+          "font-serif text-3xl nav:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap",
+          isHome ? "text-primary-foreground" : "text-primary",
+        ]}
+      >
+        SWFL <span class="text-accent">Solutions</span>
+      </span>
+      <span
+        data-tagline
+        class:list={[
+          "mt-1 text-[9px] sm:text-[10px] nav:text-xs uppercase tracking-[0.15em] nav:tracking-[0.18em] font-medium transition-colors hidden sm:block",
+          isHome ? "text-primary-foreground/80" : "text-muted-foreground",
+        ]}
+      >
+        Owner Representative · Project Management
+      </span>
+    </a>
+
+    <a
+      href="tel:941-249-5750"
+      translate="no"
+      data-phone
+      class:list={[
+        "hidden nav:block font-serif text-xl nav:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-tight transition-colors leading-none whitespace-nowrap nav:flex-1 nav:text-center",
+        isHome ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
+      ]}
+    >941-249-5750</a>
+
+    <a
+      href="tel:941-249-5750"
+      translate="no"
+      aria-label="Call 941-249-5750"
+      data-call
+      class:list={[
+        "nav:hidden inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-medium text-sm transition-colors min-h-[44px]",
+        isHome ? "text-primary-foreground hover:text-accent" : "text-primary hover:text-accent",
+      ]}
+    >
+      <Icon name="lucide:phone" class="w-4 h-4" /> Call
+    </a>
+
+    <button
+      id="menu-toggle"
+      data-menu
+      class:list={[
+        "nav:hidden p-2 rounded-md transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center",
+        isHome ? "text-primary-foreground" : "text-primary",
+      ]}
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <Icon name="lucide:menu" class="w-6 h-6" data-icon-open />
+      <Icon name="lucide:x" class="w-6 h-6 hidden" data-icon-close />
+    </button>
+
+    <nav class="hidden nav:flex items-end gap-3 lg:gap-4 xl:gap-6">
+      {navItems.map((item) => (
+        <a
+          href={item.to}
+          data-navlink
+          class:list={[
+            "text-sm font-medium tracking-wide transition-colors relative py-2",
+            isHome ? "text-primary-foreground/90 hover:text-accent" : "text-foreground/80 hover:text-primary",
+            isActive(item.to) && "after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-accent",
+            isActive(item.to) && (isHome ? "text-primary-foreground" : "text-primary"),
+          ]}
+        >{item.label}</a>
+      ))}
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center gap-2 h-10 px-4 rounded-md bg-accent text-accent-foreground hover:bg-accent-glow hover:shadow-gold transition-all font-medium text-sm"
+      >
+        <Icon name="lucide:phone" class="w-4 h-4" /> Free Consultation
+      </a>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="nav:hidden hidden bg-background border-t border-border shadow-elegant absolute inset-x-0 top-full">
+    <nav class="container-prose py-6 flex flex-col gap-1">
+      {navItems.map((item) => (
+        <a
+          href={item.to}
+          class:list={[
+            "px-4 py-3 rounded-md text-base font-medium transition-colors",
+            isActive(item.to) ? "bg-secondary text-primary" : "text-foreground/80 hover:bg-secondary",
+          ]}
+        >{item.label}</a>
+      ))}
+      <a href="/contact" class="mt-4 inline-flex items-center justify-center gap-2 h-10 px-4 rounded-md bg-accent text-accent-foreground hover:bg-accent-glow w-full font-medium">
+        <Icon name="lucide:phone" class="w-4 h-4" /> Free Consultation
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById("site-header")!;
+  const isHome = header.dataset.home === "true";
+  const menuBtn = document.getElementById("menu-toggle")!;
+  const menu = document.getElementById("mobile-menu")!;
+  const iconOpen = menuBtn.querySelector("[data-icon-open]") as HTMLElement;
+  const iconClose = menuBtn.querySelector("[data-icon-close]") as HTMLElement;
+
+  let open = false;
+  const setOpen = (v: boolean) => {
+    open = v;
+    menu.classList.toggle("hidden", !v);
+    iconOpen.classList.toggle("hidden", v);
+    iconClose.classList.toggle("hidden", !v);
+    menuBtn.setAttribute("aria-expanded", String(v));
+    applyState();
+  };
+  menuBtn.addEventListener("click", () => setOpen(!open));
+
+  const applyState = () => {
+    if (!isHome) return;
+    const transparent = window.scrollY <= 20 && !open;
+    header.classList.toggle("bg-transparent", transparent);
+    header.classList.toggle("bg-background/95", !transparent);
+    header.classList.toggle("backdrop-blur-md", !transparent);
+    header.classList.toggle("shadow-card-soft", !transparent);
+    header.classList.toggle("border-b", !transparent);
+    header.classList.toggle("border-border", !transparent);
+
+    const swap = (sel: string, light: string, dark: string) => {
+      header.querySelectorAll(sel).forEach((el) => {
+        el.classList.toggle(light, transparent);
+        el.classList.toggle(dark, !transparent);
+      });
+    };
+    swap("[data-logo]", "text-primary-foreground", "text-primary");
+    swap("[data-tagline]", "text-primary-foreground/80", "text-muted-foreground");
+  };
+  if (isHome) {
+    window.addEventListener("scroll", applyState, { passive: true });
+    applyState();
+  }
+</script>

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  image: ImageMetadata;
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+}
+const { image, eyebrow, title, subtitle } = Astro.props;
+---
+<section class="relative h-[60vh] min-h-[440px] flex items-center text-primary-foreground overflow-hidden pb-12 nav:pb-16">
+  <Image src={image} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" widths={[768, 1280, 1920]} sizes="100vw" />
+  <div class="absolute inset-0 bg-gradient-hero"></div>
+  <div class="container-prose relative z-10 pt-32 nav:pt-36 lg:pt-40">
+    {eyebrow && (
+      <div class="flex items-center gap-3 mb-5 animate-fade-in-up">
+        <span class="w-10 h-[2px] bg-accent"></span>
+        <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-accent font-medium">{eyebrow}</span>
+      </div>
+    )}
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight max-w-4xl animate-fade-in-up whitespace-pre-line">{title}</h1>
+    {subtitle && <p class="mt-6 text-lg sm:text-xl text-primary-foreground/85 max-w-2xl leading-relaxed animate-fade-in-up">{subtitle}</p>}
+    <slot />
+  </div>
+</section>
